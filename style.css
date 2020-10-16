@@ -1,4 +1,63 @@
-.choices img {
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    color:#D9514EFF;
+    padding-top: 20px;
+}
+
+.rules {
+    font-size: 1.3em;
+    padding: 10px;
+}
+
+.choice {
     width: auto;
-    height: 200px;
+    height: 150px;
+    padding: 5px;
+}
+
+.choice:hover {
+    width: auto;
+    height: 180px;
+}
+
+.flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    width: 350px;
+}
+
+.flex-item {
+    width: 46%;
+    margin-bottom: 2%; /* (100-32*3)/2 */
+    position: relative;
+    font-size: 1.2em;
+}
+
+.text-result {
+    color: #3681A8;
+}
+
+.winner {
+    font-size: 2em;
+    color: #E05338;
+}
+
+.retry {
+    background-color: #E09F96;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
 }

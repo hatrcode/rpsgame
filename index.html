@@ -10,21 +10,26 @@
   </head>
   <body>
     <h1>Rock, Paper, Scissors!</h1>
-    <div class="choices">
-      <img id="rock" src="images/rock.png" alt="rock">
-      <img id="paper" src="images/paper.png" alt="paper">
-      <img id="scissors" src="images/scissors.png" alt="scissors">
+    <div>
+      <p class="rules" style="color:#2F5875"><span style="font-weight: bold;">Rules</span>: Who gets 5 scores win</p>
     </div>
     <div>
-        <p>Player Score: <span id="player">0</span></p>
-        <p>Computer Score: <span id="computer">0</span></p>
+      <img class="rock choice" src="images/rock.png" alt="rock">
+      <img class="paper choice" src="images/paper.png" alt="paper">
+      <img class="scissors choice" src="images/scissors.png" alt="scissors">
+    </div>
+    <div class="flex-container">
+        <p class="flex-item" style="color:#1169A8">Player Score</p>
+        <p class="flex-item" style="color:#1169A8">Computer Score</p>
+        <p class="flex-item" style="color:#D9514EFF"><span class="player">0</span> - <span class="computer">0</span></p>
+    </div>
+   
+    <div>
+        <p class="text-result"></p>
+        <p class="winner"></p>
     </div>
     <div>
-        <p id="text-result">You have 5 chances</p><br>
-        <p id="result"></p>
-    </div>
-    <div>
-        <button id="retry">Retry</button>
+        <button class="retry">Retry</button>
     </div>
     <script type="text/javascript" src="script.js"></script>
   </body> 
