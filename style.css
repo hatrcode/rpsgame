@@ -43,10 +43,16 @@ img {
     margin-bottom: 2%; /* (100-32*3)/2 */
     position: relative;
     font-size: 1.2em;
+    font-weight: bold;
+}
+
+.computer-choice {
+    font-size: 1.2em;
 }
 
 .text-result {
     color: #3681A8;
+    font-style: italic;
 }
 
 .winner {
