@@ -6,16 +6,20 @@ const player = document.querySelector('.player');
 const computer = document.querySelector('.computer');
 const textResult = document.querySelector('.text-result');
 const winner = document.querySelector('.winner');
+const computerChoice = document.querySelector('.computer-choice');
 
 // Computer choice:
 computerPlay = () => {
     let randomNumber = Math.round(Math.random() * 3);
     if (randomNumber == 1) {
         computerSelection = 'r';
+        computerChoice.textContent = "I chose Rock!";
     } else if (randomNumber == 2) {
         computerSelection = 'p';
+        computerChoice.textContent = "I chose Paper!";
     } else {
         computerSelection = 's';
+        computerChoice.textContent = "I chose Scissors!";
     }
 }
 
@@ -47,7 +51,7 @@ computerWin = () => {
 playRound = (playerSelection, computerSelection) => {
     if (playerScore < 5 && computerScore < 5) {
         if (playerSelection == computerSelection) {
-            textResult.textContent = 'You both chose the same!';
+            textResult.textContent = 'It\'s a Tie!';
         } else if (playerSelection == 'r' && computerSelection == 's') {
             playerWin();
             textResult.textContent = 'You won! Rock beats Scissors';
@@ -109,13 +113,13 @@ textScore = () => {
 winnerText = () => {
     if (playerScore === 5) {
         winner.textContent = 'Congratulations! You won!';
-        document.querySelector('.text-result').style.display = 'none';
+        document.querySelector('.context').style.display = 'none';
     } else if (computerScore === 5) {
         winner.textContent = 'Sorry! Good luck next time';
-        document.querySelector('.text-result').style.display = 'none';
+        document.querySelector('.context').style.display = 'none';
     } else if (playerScore === 5 && computerScore === 5) {
         winner.textContent = 'It\'s a Tie!';
-        document.querySelector('.text-result').style.display = 'none';
+        document.querySelector('.context').style.display = 'none';
     }
 }
 
